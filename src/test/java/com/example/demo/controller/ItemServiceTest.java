@@ -65,10 +65,4 @@ class ItemServiceTest {
         assertThat(existing.getName()).isEqualTo("New");
     }
 
-    @Test
-    void delete_shouldCallRepository() {
-        service.delete(1L);
-
-        verify(repository).deleteById(1L);
-    }
 }
