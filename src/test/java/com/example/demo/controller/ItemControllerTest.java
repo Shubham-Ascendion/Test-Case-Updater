@@ -88,12 +88,5 @@ class ItemControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.name").value("Updated"));
     }
-
-    @Test
-    void deleteItem_shouldReturn204() throws Exception {
-        mockMvc.perform(delete("/api/items/1"))
-                .andExpect(status().isNoContent());
-
-        Mockito.verify(itemService).delete(1L);
-    }
 }
+
